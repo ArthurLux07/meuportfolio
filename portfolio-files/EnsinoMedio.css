@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #161616;
+    color: #ffff !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 600;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.containerCards {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+.card {
+  background-color: #161616;
+  color: #fff;
+  width: 100%;
+  max-width: 300px; 
+  height: 350px; 
+  font-size: smaller;
+  border: 1px solid #ffffff33;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px 0 #000;
+  position: relative; 
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0; 
+  transform: translateY(50px); 
+  animation: fadeInFromBottom 0.5s ease-in-out forwards; 
+  transition: 0.3s !important;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.2s; 
+}
+.card:nth-child(2) {
+  animation-delay: 0.4s; 
+}
+.card:nth-child(3) {
+  animation-delay: 0.6s; 
+}
+.card:nth-child(4) {
+  animation-delay: 0.8s; 
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; 
+    background: linear-gradient(to right, #ad0b0b, #470404); 
+    border-bottom-left-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+}
+
+.card:hover {
+    box-shadow: 0 20px 30px 0px #000;
+    border: 1px solid #ffffff33;
+    border-bottom: transparent;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.slogan {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+.btnVerMais {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: transparent;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.btnVerMais:hover {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #282828;
+    border-radius: 15px;
+    background-color: #282828;
+    padding: 10px;
+}
+
+.btnVoltarPag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+    border-radius: 10px;
+    width: 7%;
+    padding: 12px;
+    margin-top: 3rem;
+    transition: 0.3s;
+}
+
+.btnVoltarPag:hover {
+    transform: translateY(-3px);
+    background-color: #292929;
+    box-shadow: 1px 1px 70px 10px #000;
+}
+
+.material-symbols-outlined {
+    align-items: center;
+}
